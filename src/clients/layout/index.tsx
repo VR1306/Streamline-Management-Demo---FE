@@ -170,7 +170,7 @@ const ClientHome = () => {
 
       {!organizationSelected && (
         <div className="flex flex-col items-center justify-center w-full h-[60vh]">
-          <Image src={Images.noData} alt="No Data" />
+          <Image src={Images.noData} alt="No Data" loading="lazy"/>
           <label className="text-sm md:text-lg">
             Please select an organization to view the metrics
           </label>
