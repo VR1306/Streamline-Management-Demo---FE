@@ -47,8 +47,7 @@ const Performance = ({ organization, socketData,selectedModule }: Props) => {
 
       {/* KPI Cards */}
       <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-        {/* Metric Value */}
-        <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+        {/* <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
           <p className="text-sm font-medium text-gray-500">
             Current Metric Value
           </p>
@@ -56,7 +55,7 @@ const Performance = ({ organization, socketData,selectedModule }: Props) => {
           <h2 className="mt-3 text-5xl font-bold text-blue-600">
             {socketData?.value ?? "--"}
           </h2>
-        </div>
+        </div> */}
 
         {/* Status */}
         <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
@@ -130,7 +129,7 @@ const Performance = ({ organization, socketData,selectedModule }: Props) => {
             </p>
           </div>
 
-          <div>
+          {/* <div>
             <p className="text-sm text-gray-500">
               Metric Value
             </p>
@@ -138,7 +137,7 @@ const Performance = ({ organization, socketData,selectedModule }: Props) => {
             <p className="mt-1 font-semibold text-blue-600">
               {socketData?.value ?? "--"}
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
 

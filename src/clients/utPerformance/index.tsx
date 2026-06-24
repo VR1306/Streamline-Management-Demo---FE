@@ -51,7 +51,7 @@ const UTPerformance = ({
 
       {/* KPI Cards */}
       <div className="grid grid-cols-1 gap-5 md:grid-cols-4">
-        <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+        {/* <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
           <p className="text-sm text-gray-500">
             UT Metric Value
           </p>
@@ -59,7 +59,7 @@ const UTPerformance = ({
           <h2 className="mt-3 text-4xl font-bold text-emerald-600">
             {socketData?.value ?? "--"}
           </h2>
-        </div>
+        </div> */}
 
         <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
           <p className="text-sm text-gray-500">
@@ -134,7 +134,7 @@ const UTPerformance = ({
             </p>
           </div>
 
-          <div>
+          {/* <div>
             <p className="text-sm text-gray-500">
               UT Performance Score
             </p>
@@ -142,7 +142,7 @@ const UTPerformance = ({
             <p className="mt-1 text-xl font-bold text-emerald-600">
               {socketData?.value ?? "--"}
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
 
