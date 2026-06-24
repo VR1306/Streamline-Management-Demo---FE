@@ -10,7 +10,6 @@ import {
     useFormContext,
     useWatch,
 } from 'react-hook-form';
-import { useTranslation } from 'react-i18next';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
 import Image from 'next/image';
 import { Images } from '@/src/images';
@@ -70,7 +69,6 @@ const ControlledInput = <
 ) => {
     const { control } = useFormContext<TFieldValues>();
     const [showPassword, setShowPassword] = useState(false);
-    const { t } = useTranslation(['common', 'auth']);
 
     const searchWatchValue = useWatch({
         control,
@@ -222,9 +220,7 @@ const ControlledInput = <
 
                         {error && !hideError ? (
                             <p className="mt-1 text-xs text-error" role="alert">
-                                {t(error.message as string, {
-                                    defaultValue: error.message as string,
-                                })}
+                                {error.message as string}
                             </p>
                         ) : (
                             helperText

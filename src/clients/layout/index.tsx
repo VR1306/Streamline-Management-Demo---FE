@@ -121,16 +121,15 @@ const ClientHome = () => {
       return navLinks;
     } else {
       return [
-        ...navLinks,
         {
-          label: "Service Regions",
-          key: "serviceRegions",
-          subTitle: "ext.pathway.serviceRegions",
+          label: "Performance Tabs",
+          key: "performanceTabs",
+          subTitle: "ext.pathway.performance.tabs",
         },
         {
-          label: "Hotspots",
-          key: "hotspots",
-          subTitle: "ext.pathway.hotspots",
+          label: "Performance Jobs",
+          key: "performanceJobs",
+          subTitle: "ext.pathway.performance.jobs",
         },
       ];
     }
@@ -140,9 +139,9 @@ const ClientHome = () => {
 
   useEffect(()=>{
     if(moduleTypeValue?.value){
-      setActiveTab("eline-performance")
+      setActiveTab(isStreamLineModule?"eline-performance":'performanceTabs')
     }
-  },[moduleTypeValue?.value])
+  },[moduleTypeValue?.value,isStreamLineModule])
 
   // Show a loader whenever the module type changes so the UI
   // has time to re-render the new nav links before content appears.
