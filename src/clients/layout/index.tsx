@@ -35,11 +35,11 @@ export interface FormValues {
 }
 
 const ClientHome = () => {
+  const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState<string>("eline-performance");
   const [socketData, setSocketData] = useState<RealtimePayload | null>(null);
   const [loading, setLoading] = useState(false);
   const [moduleLoading, setModuleLoading] = useState(false);
-  const searchParams = useSearchParams();
   const tabParam = searchParams.get('tab');
   const navLinks: NavItem[] = useMemo(
     () => [

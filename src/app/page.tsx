@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import ClientHome from "../clients/layout";
 import { generateMetadata } from "../helpers";
 
@@ -9,6 +10,8 @@ export const metadata = generateMetadata({
 
 export default function Home() {
   return <div>
+    <Suspense fallback={<div>Loading...</div>}>
     <ClientHome/>
+    </Suspense>
     </div>;
 }
